@@ -28,7 +28,7 @@ class ModalStart extends Component {
 					{/* <ModalHeader toggle={this.toggle}>Enter your Nickname : </ModalHeader> */}
 					<ModalBody>
 						<RogerRabbit />
-						<h3>Enter your Nickname : </h3>
+						<h3 style={{ textAlign: "center" }}>Enter your Nickname : </h3>
 						<FormGroup>
 							<Input id='name' type='text' pseudo={this.state.InputValue} onChange={this.handleChange} invalid={this.state.isInvalid} />
 							<FormFeedback>Oh F**k... Please enter your nickname stupid guy !</FormFeedback>
