@@ -1,11 +1,9 @@
 import React from "react";
-import { Card, CardImg } from "reactstrap";
-import easteregg from "../src/img/easteregg.png";
 
-export default function ImageEgg() {
+export default function ImageEgg({ image }) {
 	return (
 		<div>
-			<img src={easteregg} />
+			<img src={image} style={{ height: "60vh", marginTop: "30px" }} />
 		</div>
 	);
 }
