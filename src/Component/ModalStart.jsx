@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, FormFeedback, Input } from "reactstrap";
+import { Button, Modal, ModalBody, FormGroup, FormFeedback, Input } from "reactstrap";
+import RogerRabbit from "./RogerImage";
 
 class ModalStart extends Component {
 	constructor(props) {
@@ -26,14 +27,17 @@ class ModalStart extends Component {
 				<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
 					{/* <ModalHeader toggle={this.toggle}>Enter your Nickname : </ModalHeader> */}
 					<ModalBody>
+						<RogerRabbit />
 						<h3>Enter your Nickname : </h3>
 						<FormGroup>
 							<Input id='name' type='text' pseudo={this.state.InputValue} onChange={this.handleChange} invalid={this.state.isInvalid} />
 							<FormFeedback>Oh F**k... Please enter your nickname stupid guy !</FormFeedback>
 						</FormGroup>
-						<Button color='primary' onClick={this.toggle}>
-							Play
-						</Button>
+						<div style={{ textAlign: "center" }}>
+							<Button outline color='danger' onClick={this.toggle}>
+								Play
+							</Button>
+						</div>
 					</ModalBody>
 				</Modal>
 			</div>

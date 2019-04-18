@@ -1,16 +1,17 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
-import Title from "./Title";
-import ButtonStart from "./ButtonStart";
+import { Container } from "reactstrap";
+
 import "./componentbackground.module.css";
-import LinkApi from "./ComponentLinkAPI";
+import ModalStart from "./Component/ModalStart";
+import Title from "./Component/Title";
+import LinkApi from "./Component/ComponentLinkAPI";
 
 const ComponentBackgroundPage = () => {
 	return (
 		<Container className='backgroundImage' style={{ height: "100vh" }}>
 			<LinkApi />
 			<Title />
-			<ButtonStart />
+			<ModalStart />
 		</Container>
 	);
 };
