@@ -1,18 +1,17 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import Title from './Title';
-import ImageEggHome from './ImageEggHome';
-import ButtonStart from './ButtonStart';
-import styles from './componentbackground.module.css';
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import Title from "./Title";
+import ImageEggHome from "./ImageEggHome";
+import ButtonStart from "./ButtonStart";
+import "./componentbackground.module.css";
 
 const ComponentBackgroundPage = () => {
 	return (
-		<div>
-			{/* <div className={styles.BackgroundHome}>  */}
+		<Container className='backgroundImage' style={{ height: "100vh" }}>
 			<ImageEggHome />
 			<Title />
 			<ButtonStart />
-		</div>
+		</Container>
 	);
 };
 

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import ComponentBackgroundPage from './ComponentBackgroundPage';
+import React, { Component } from "react";
+import "./App.css";
+import ComponentBackgroundPage from "./ComponentBackgroundPage";
 
 class App extends Component {
 	render() {
