@@ -1,10 +1,4 @@
 import React from 'react';
-import {
-    Container,
-    Row,
-    Col,
-}
-    from 'reactstrap';
 
 class Title extends Component {
     render() {
