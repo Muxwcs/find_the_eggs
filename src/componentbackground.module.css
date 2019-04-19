@@ -1,4 +1,6 @@
-.BackgroundHome {
-	background-image: url('./img/prairie.png');
-	background-size: contain;
+body {
+	background-image: url(./img/prairie2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
 }

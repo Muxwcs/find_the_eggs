@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-// import ComponentBackgroundPage from './ComponentBackgroundPage';
-import Skeleton from './skeleton';
+import React, { Component } from "react";
+import Routeur from "./Component/Routeur";
 
 class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				{/* <Switch>
-					<ComponentBackgroundPage />
-				</Switch> */}
-				<Skeleton />
+				<Routeur />
 			</div>
 		);
 	}
