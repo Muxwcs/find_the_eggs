@@ -40,7 +40,14 @@ class LevelLinkApi extends Component {
         return (
             <div>
                 {eggs.map(egg => {
-                    return <EggRayman image={egg.image} x={random(20, 1000)} y={random(10, 900)} size={computHeighFromRarity(egg.rarity)} />;
+                    return (
+                        <EggRayman
+                            image={egg.image}
+                            x={random(20, screen.width)}
+                            y={random(20, screen.height)}
+                            size={computHeighFromRarity(egg.rarity)}
+                        />
+                    );
                 })}
             </div>
         );
