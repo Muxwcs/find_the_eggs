@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-
-import ComponentBackgroundPage from "./ComponentBackgroundPage";
+import Routeur from "./Component/Routeur";
 
 class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<ComponentBackgroundPage />
+				<Routeur />
 			</div>
 		);
 	}
