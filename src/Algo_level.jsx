@@ -16,3 +16,7 @@ export function computHeighFromRarity(rarity) {
 export function random(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+export function getScoreFromRarity(rarity) {
+    return rarityMap[rarity];
+}

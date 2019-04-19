@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 
 import EggRayman from "./EggRayman";
-import { random, computHeighFromRarity } from "../Algo_level";
+import { random, computHeighFromRarity, getScoreFromRarity } from "../Algo_level";
 
 class LevelLinkApi extends Component {
     constructor(props) {
@@ -10,7 +10,8 @@ class LevelLinkApi extends Component {
         this.state = {
             eggs: [],
             isLoading: false,
-            isError: false
+            isError: false,
+            score: 0
         };
     }
 
@@ -25,7 +26,18 @@ class LevelLinkApi extends Component {
         ];
         Promise.all(getEggRequests)
             .then(responses => {
-                this.setState({ eggs: responses.map(res => res.data), isLoading: false });
+                this.setState({
+                    eggs: responses.map(res => ({
+                        image: res.data.image,
+                        x: random(20, window.innerWidth - 130),
+                        y: random(20, window.innerHeight - 130),
+                        size: computHeighFromRarity(res.data.rarity),
+                        isVisible: false,
+                        getScoreFromRarity,
+                        score: getScoreFromRarity(res.data.rarity)
+                    })),
+                    isLoading: false
+                });
             })
             .catch(() => this.setState({ isError: true, isLoading: false }));
     }
@@ -37,15 +49,42 @@ class LevelLinkApi extends Component {
         if (isLoading) {
             return "Loading...";
         }
+
         return (
             <div>
-                {eggs.map(egg => {
+                <h1>Score : {this.state.score}</h1>
+                {eggs.map((egg, i) => {
                     return (
                         <EggRayman
                             image={egg.image}
-                            x={random(20, screen.width)}
-                            y={random(20, screen.height)}
-                            size={computHeighFromRarity(egg.rarity)}
+                            x={egg.x}
+                            y={egg.y}
+                            size={egg.size}
+                            isVisible={egg.isVisible}
+                            onClick={() => {
+                                this.setState({
+                                    eggs: eggs.filter((egg, j) => i !== j),
+                                    score: this.state.score + egg.score
+                                });
+                            }}
+                            onMouseLeave={() => {
+                                const newEgg = {
+                                    ...egg,
+                                    isVisible: false
+                                };
+                                this.setState({
+                                    eggs: eggs.map((egg, j) => (i === j ? newEgg : egg))
+                                });
+                            }}
+                            onMouseEnter={() => {
+                                const newEgg = {
+                                    ...egg,
+                                    isVisible: true
+                                };
+                                this.setState({
+                                    eggs: eggs.map((egg, j) => (i === j ? newEgg : egg))
+                                });
+                            }}
                         />
                     );
                 })}
