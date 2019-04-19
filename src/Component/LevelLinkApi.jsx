@@ -8,7 +8,7 @@ class LevelLinkApi extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            imgEgg: [],
+            eggs: [],
             isLoading: false,
             isError: false
         };
@@ -16,14 +16,21 @@ class LevelLinkApi extends Component {
 
     componentDidMount() {
         this.setState({ isLoading: true });
-        Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random")
-            .then(res => {
-                this.setState({ imgEgg: res.data, isLoading: false });
+        const getEggRequests = [
+            Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random"),
+            Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random"),
+            Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random"),
+            Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random"),
+            Axios.get("http://easteregg.wildcodeschool.fr/api/eggs/random")
+        ];
+        Promise.all(getEggRequests)
+            .then(responses => {
+                this.setState({ eggs: responses.map(res => res.data), isLoading: false });
             })
             .catch(() => this.setState({ isError: true, isLoading: false }));
     }
     render() {
-        const { imgEgg, isError, isLoading } = this.state;
+        const { eggs, isError, isLoading } = this.state;
         if (isError) {
             return "TOO BAD ! TRY AGAIN...";
         }
@@ -32,12 +39,9 @@ class LevelLinkApi extends Component {
         }
         return (
             <div>
-                <EggRayman
-                    image="https://a9effd958e0dc59aaf3b-80520a33cc33a15351bd958c9b8ecc55.ssl.cf2.rackcdn.com/one-step/graphic-egg.png"
-                    x={random(20, 1000)}
-                    y={random(10, 1000)}
-                    size={computHeighFromRarity("legendary")}
-                />
+                {eggs.map(egg => {
+                    return <EggRayman image={egg.image} x={random(20, 1000)} y={random(10, 900)} size={computHeighFromRarity(egg.rarity)} />;
+                })}
             </div>
         );
     }
