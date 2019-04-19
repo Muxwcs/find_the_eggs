@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
 
-import ImageEgg from "./ImageEggHome";
+import EggRayman from "./EggRayman";
+import { random, computHeighFromRarity } from "../Algo_level";
 
 class LevelLinkApi extends Component {
     constructor(props) {
@@ -31,9 +32,12 @@ class LevelLinkApi extends Component {
         }
         return (
             <div>
-                <button>
-                    <ImageEgg {...imgEgg} />
-                </button>
+                <EggRayman
+                    image="https://a9effd958e0dc59aaf3b-80520a33cc33a15351bd958c9b8ecc55.ssl.cf2.rackcdn.com/one-step/graphic-egg.png"
+                    x={random(20, 1000)}
+                    y={random(10, 1000)}
+                    size={computHeighFromRarity("legendary")}
+                />
             </div>
         );
     }

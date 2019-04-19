@@ -8,10 +8,10 @@ class Skeleton extends Component {
         return (
             <Container className={styles.bgrayman} fluid>
                 <LevelLinkApi />
+                {/* <LevelLinkApi />
                 <LevelLinkApi />
                 <LevelLinkApi />
-                <LevelLinkApi />
-                <LevelLinkApi />
+                <LevelLinkApi /> */}
             </Container>
         );
     }
