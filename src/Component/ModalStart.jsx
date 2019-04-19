@@ -25,7 +25,6 @@ class ModalStart extends Component {
 					Start
 				</Button>
 				<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-					{/* <ModalHeader toggle={this.toggle}>Enter your Nickname : </ModalHeader> */}
 					<ModalBody>
 						<RogerRabbit />
 						<h3 style={{ textAlign: "center" }}>Enter your Nickname : </h3>
