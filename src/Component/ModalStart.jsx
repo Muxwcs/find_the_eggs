@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalBody, FormGroup, FormFeedback, Input } from "reactstrap";
+import { Link } from "react-router-dom";
 import RogerRabbit from "./RogerImage";
 
 class ModalStart extends Component {
@@ -33,9 +34,11 @@ class ModalStart extends Component {
 							<FormFeedback>Oh F**k... Please enter your nickname stupid guy !</FormFeedback>
 						</FormGroup>
 						<div style={{ textAlign: "center" }}>
-							<Button outline color='danger' onClick={this.toggle}>
-								Play
-							</Button>
+							<Link to={"/level1"}>
+								<Button outline color='danger' onClick={this.toggle}>
+									Play
+								</Button>
+							</Link>
 						</div>
 					</ModalBody>
 				</Modal>

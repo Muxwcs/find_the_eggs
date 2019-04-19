@@ -34,28 +34,6 @@ class NameForm extends Component {
 	render() {
 		return (
 			<>
-				{/* // 		<div>
-// <Button >
-//  					
-// 				</Button>
-// 				<Modal click={this.state.click} toggle={this.toggle}>
-// 					<ModalHeader toggle={this.toggle}>
-// 						<h3>Login</h3>
-// 					</ModalHeader>
-// 					<ModalBody>
-// 						<FormGroup>
-// 							<Input id='name' type='text' pseudo={this.state.InputValue} onChange={this.handleChange} invalid={this.state.isInvalid} />
-// 							<FormFeedback>Oh F**k... Please enter your nickname stupid guy !</FormFeedback>
-// 						</FormGroup>
-// 					</ModalBody>
-// 					<ModalFooter>
-// 						<Button color={this.state.isInvalid ? "danger" : "primary"} onClick={this.toggle}>
-// 							Sign up
-// 						</Button>{" "}
-// 					</ModalFooter>
-// 				</Modal>
-// 			</div>  */}
-
 				<Container className='FooterCSS'>
 					<Col className='FooterCSS'>
 						<Button outline color='success' onClick={this.handleClick}>

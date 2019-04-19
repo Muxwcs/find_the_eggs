@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ImageEgg from "./ImageEggHome";
 import Axios from "axios";
 
-class LinkApi extends Component {
+class HomeLinkApi extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -36,4 +36,4 @@ class LinkApi extends Component {
 	}
 }
 
-export default LinkApi;
+export default HomeLinkApi;
