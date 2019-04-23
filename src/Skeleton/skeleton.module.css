@@ -1,0 +1,8 @@
+.bgrayman {
+    height: 100vh;
+    text-align: center;
+    background-image: url(../img/rayman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
