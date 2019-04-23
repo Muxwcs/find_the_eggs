@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 
 import EggRayman from "./EggRayman";
-import { random, computHeighFromRarity, getScoreFromRarity } from "../Algo_level";
+import { random, computHeighFromRarity, getScoreFromRarity } from "./Algo_level";
 
 class LevelLinkApi extends Component {
     constructor(props) {
