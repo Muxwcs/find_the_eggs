@@ -1,3 +1,12 @@
+# Find The Eggs
+
+### Wild Code School Hackathon Project:
+[Sylène Manusset](https://github.com/Zesysy), [Cloé Truel](https://github.com/clotl), [Marlène Angouillant](https://github.com/Malou64), [Stéphane Vivier](https://github.com/StephaneVVr), [Fabien Goyhex](https://github.com/FabienGOYHEX), [Guillaume Ribéroux](https://github.com/Muxwcs).
+
+[Find The Eggs Demo](https://easter-eggs-game.netlify.com/)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
