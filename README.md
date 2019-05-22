@@ -3,7 +3,7 @@
 ### Wild Code School Hackathon Project:
 [Sylène Manusset](https://github.com/Zesysy), [Cloé Truel](https://github.com/clotl), [Marlène Angouillant](https://github.com/Malou64), [Stéphane Vivier](https://github.com/StephaneVVr), [Fabien Goyhex](https://github.com/FabienGOYHEX), [Guillaume Ribéroux](https://github.com/Muxwcs).
 
-[Find The Eggs Demo](https://easter-eggs-game.netlify.com/)
+## [FIND THE EGGS DEMO](https://easter-eggs-game.netlify.com/)
 
 -----------------------------------------------------------------------------------------------------------------------------
 
